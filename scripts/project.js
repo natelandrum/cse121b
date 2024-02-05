@@ -56,10 +56,19 @@ const displayScriptures = (list) => {
 
 const reset = () => scriptureElement.innerHTML = "";
 
-function filterScriptures(list)
+function filterScriptures(list, section=null)
 {
     reset();
-    const filter = document.querySelector("#filtered").value;
+    let filter;
+    if (section != null)
+    {
+        filter = section;
+    }
+    else
+    {
+        filter = document.querySelector("#filtered").value;
+    }
+    
     
     switch (filter) {
         case "old":
@@ -118,10 +127,10 @@ function hideScriptures(target)
     const message = "Click on the scripture to hide random words until you have memorized the whole scripture."
     infoMessage(message, "after");
 
-    main();
+    main(document.querySelector("#filtered").value);
 }
 
-function main()
+function main(currentSection)
 {
     const mainElement = document.querySelector("article");
     const scripture = mainElement.data;
@@ -137,9 +146,9 @@ function main()
                 reset();
                 scripture.unhideAllWords();
 
-                displayScriptures(scriptureList);
+                filterScriptures(scriptureList, currentSection);
                 document.querySelector("#filtered").classList.remove("hidden");
-                document.querySelector("#filtered").value = "all";
+                document.querySelector("#filtered").value = currentSection;
 
                 document.querySelector("#gridly").removeChild(document.querySelector("#info1"))
               }, 4000);
