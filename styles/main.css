@@ -197,6 +197,10 @@ footer {
     gap: 1rem;
 }
 
+.hidden {
+    display: none;
+}
+
 /* ID Selectors */
 
 #home {
@@ -246,7 +250,7 @@ footer {
     color: #eee;
 }
 
-#temples {
+#temples, #scriptures{
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
     grid-gap: .5rem;
@@ -256,6 +260,18 @@ footer {
 
 #temples article {
     height: 250px;
+    margin: .5rem;
+    border: 1px solid rgba(0, 0, 0, .1);
+    padding: 1rem;
+    background-color: #eee;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+}
+
+#scriptures article {
+    height: auto;
     margin: .5rem;
     border: 1px solid rgba(0, 0, 0, .1);
     padding: 1rem;
@@ -278,6 +294,7 @@ footer {
     box-shadow: 0 0 30px #777;
     margin: .5rem;
 }
+
 
 /* Media Queries */
 @media only screen and (min-width: 32.5em) {
