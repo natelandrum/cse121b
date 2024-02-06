@@ -1,6 +1,5 @@
-// import scriptureList from "../scriptures.json" assert {type: 'json'};
-import Reference from "./Reference.js"
-import Scripture from "./Scripture.js"
+import Reference from "../scripts/Reference.js"
+import Scripture from "../scripts/Scripture.js"
 
 let scriptureList;
 const scriptureElement = document.querySelector("#scriptures");

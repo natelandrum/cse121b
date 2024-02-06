@@ -1,4 +1,4 @@
-import Word from "./Word.js"
+import Word from "../scripts/Word.js"
 
 class Scripture
 {
