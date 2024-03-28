@@ -6,7 +6,7 @@ const scriptureElement = document.querySelector("#scriptures");
 
 
 const getScriptures = async () => {
-    const response  = await fetch("https://run.mocky.io/v3/53718bb8-421e-474e-b44b-c1ce4ad46349")
+    const response  = await fetch("https://natelandrum.github.io/cse121b/project/assets/scriptures.json");
     if (response.ok){
         scriptureList = await response.json();
     }
