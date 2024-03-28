@@ -34,8 +34,8 @@ const displayScriptures = (list) => {
                 hideScriptures(e.target)
             }
         }, {once: true})
-
-        let r = new Reference(scripture.book, scripture.chapter, scripture.startVerse, scripture.endVerse);
+        
+        let r = new Reference(scripture.reference.book, scripture.reference.chapter, scripture.reference.startVerse, scripture.reference.endVerse);
         let s = new Scripture(scripture.scripture);
 
         article.data = s;
